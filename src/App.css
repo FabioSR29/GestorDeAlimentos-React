@@ -1,0 +1,398 @@
+div {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    gap: 10px;
+    background: linear-gradient(rgba(19, 187, 253, 0.521), rgba(1, 252, 252, 0.021));
+}
+
+.btnAgregar {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(138, 245, 147, 0.945) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    animation-duration: 1s;
+    animation-name: saltos;
+    animation-iteration-count: infinite;
+}
+
+.btnAgregar svg {
+    margin-right: 6px;
+}
+
+.btnAgregar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+.btnAgregar:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(125, 121, 121, 0.2);
+}
+
+@keyframes saltos {
+    from {
+
+        transform: translateY(0px);
+    }
+
+    to {
+
+        transform: translateY(10px);
+    }
+}
+
+
+
+.Filtros {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+.FiltroBotonesContenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnFiltro {
+    width: 150px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.349);
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.ContenedorDelIcono {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(70, 255, 255));
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: 0.3s;
+}
+
+.icon {
+    border-radius: 1px;
+}
+
+.texto {
+    height: 100%;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+    transition-duration: 0.3s;
+    font-size: 1.04em;
+}
+
+.btnFiltro:hover .ContenedorDelIcono {
+    width: 40px;
+    transition-duration: 0.3s;
+}
+
+.btnFiltro:hover .texto {
+    transform: translate(10px);
+    width: 0;
+    font-size: 0;
+    transition-duration: 0.3s;
+}
+
+.btnFiltro:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(125, 121, 121, 0.2);
+}
+
+.Cuerpo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.Productos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 260px;
+    border-radius: 15px;
+    box-shadow: 1px 5px 10px rgb(107, 107, 107);
+}
+
+.Productos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    animation: none;
+}
+
+.DetalleProducto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ProductoBotones {
+    display: flex;
+    gap: 10px;
+}
+
+.btnBorrar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.btnBorrar:hover {
+    width: 85px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+
+.btnBorrar:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.btnBorrar::before {
+    position: absolute;
+    top: -20px;
+    content: "Borrar";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.btnBorrar:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+
+.btnBorrar:hover {
+    transform: scale(1.009);
+    box-shadow: 0px 0px 3px 0px #212529;
+}
+
+.btnEditar {
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.btnEditar:hover {
+    width: 85px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(12, 188, 65);
+    align-items: center;
+}
+
+.btnEditar {
+    width: 55px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(4, 4, 4);
+    align-items: center;
+}
+
+.btnEditar:hover .svgIcon2 {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(45%);
+}
+
+.btnEditar::before {
+    position: absolute;
+    top: -20px;
+    content: "Editar";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.btnEditar:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}
+
+.btnEditar:hover {
+    transform: scale(1.009);
+    box-shadow: 0px 0px 3px 0px #212529;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.svgIcon2 {
+    width: 25px;
+    transition-duration: .3s;
+}
+
+.ImagenComidas {
+    width: 100%;
+    background: linear-gradient(rgba(19, 253, 136, 0.521), rgba(1, 252, 252, 0.021));
+    margin-top: -53px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ImagenComidas img {
+    margin: 10px;
+}
+
+.ImagenBebidas {
+    width: 100%;
+    background: linear-gradient(rgba(253, 210, 19, 0.521), rgba(1, 252, 252, 0.021));
+    margin-top: -53px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.ImagenBebidas img {
+    margin: 10px;
+}
+
+.ModalContenedor {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    z-index: 2;
+}
+
+.modal {
+    width: 500px;
+    height: 500px;
+    background: #ffffff;
+    overflow: hidden;
+    border-radius: 16px;
+    color: #010101;
+}
+
+.Formulario {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    gap: 15px;
+}
+
+.Formulario input,
+select,
+option {
+    border-radius: 15px;
+    border: none;
+    background: rgba(0, 0, 255, 0.082);
+    height: 30px;
+}
+
+.FormularioBotones {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 20px;
+}
+
+.FormularioBoton {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(138, 245, 147, 0.945) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.FormularioBoton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.FormularioBoton:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(125, 121, 121, 0.2);
+}
+.colorRojo{
+    background: linear-gradient(0deg, rgb(167, 20, 20) 0%, rgba(170, 19, 19, 0.945) 100%);
+}
